@@ -12,6 +12,56 @@
   <name>RoboVM Distribution</name>
   <packaging>pom</packaging>
 
+  <properties>
+    <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>commercial</id>
+      <properties>
+        <!-- Must be specified on the Maven command line using -DlicenseTxtURL=... -->
+        <licenseTxtURL>unknown</licenseTxtURL>
+      </properties>
+    </profile>
+  </profiles>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>1.7</version>
+          <executions>
+            <execution>
+              <id>create-license-txt</id>
+              <phase>none</phase>
+              <configuration>
+                <target>
+                  <fail message="The property licenseTxtURL must be specified">
+                    <condition>
+                      <equals arg1="${licenseTxtURL}" arg2="unknown"/>
+                    </condition>
+                  </fail>
+                  <property name="licenseFile" value="${basedir}/target/LICENSE.txt"/>
+                  <echo message="Downloading license text from ${licenseTxtURL} to ${licenseFile}"/>
+                  <loadresource property="license">
+                    <url url="${licenseTxtURL}"/>
+                  </loadresource>
+                  <echo message="${license}" file="${licenseFile}"/>
+                </target>
+              </configuration>
+              <goals>
+                <goal>run</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
   <modules>
     <module>compiler</module>
     <module>package</module>

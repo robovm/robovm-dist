@@ -2,6 +2,13 @@
 
   <fileSets>
     <fileSet>
+      <directory>${project.build.directory}</directory>
+      <outputDirectory></outputDirectory>
+      <includes>
+        <include>LICENSE.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet>
       <directory>${robovmdir}/vm/binaries</directory>
       <includes>
         <include>**/*</include>
@@ -20,31 +27,50 @@
     </fileSet>
     <fileSet>
       <directory>${robovmdir}/compiler</directory>
-      <outputDirectory>license/dist-compiler/compiler</outputDirectory>
+      <outputDirectory>modules/licenses/dist-compiler/compiler</outputDirectory>
+      <includes>
+        <include>NOTICE.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>${project.build.directory}</directory>
+      <outputDirectory>modules/licenses/dist-compiler/compiler</outputDirectory>
       <includes>
         <include>LICENSE.txt</include>
-        <include>NOTICE.txt</include>
       </includes>
     </fileSet>
     <fileSet>
       <directory>${robovmdir}/llvm</directory>
-      <outputDirectory>license/dist-compiler/llvm</outputDirectory>
+      <outputDirectory>modules/licenses/dist-compiler/llvm</outputDirectory>
+      <includes>
+        <include>NOTICE.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>${project.build.directory}</directory>
+      <outputDirectory>modules/licenses/dist-compiler/llvm</outputDirectory>
       <includes>
         <include>LICENSE.txt</include>
-        <include>NOTICE.txt</include>
       </includes>
     </fileSet>
     <fileSet>
       <directory>${robovmdir}/libimobiledevice</directory>
-      <outputDirectory>license/dist-compiler/libimobiledevice</outputDirectory>
+      <outputDirectory>modules/licenses/dist-compiler/libimobiledevice</outputDirectory>
       <includes>
-        <include>LICENSE.txt</include>
+        <include>${project.build.directory}/LICENSE.txt</include>
         <include>NOTICE.txt</include>
       </includes>
     </fileSet>
     <fileSet>
+      <directory>${project.build.directory}</directory>
+      <outputDirectory>modules/licenses/dist-compiler/libimobiledevice</outputDirectory>
+      <includes>
+        <include>LICENSE.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet>
       <directory>${robovmdir}/cocoatouch</directory>
-      <outputDirectory>license/cocoatouch</outputDirectory>
+      <outputDirectory>modules/licenses/cocoatouch</outputDirectory>
       <includes>
         <include>LICENSE.txt</include>
         <include>NOTICE.txt</include>
@@ -52,7 +78,7 @@
     </fileSet>
     <fileSet>
       <directory>${robovmdir}/objc</directory>
-      <outputDirectory>license/objc</outputDirectory>
+      <outputDirectory>modules/licenses/objc</outputDirectory>
       <includes>
         <include>LICENSE.txt</include>
         <include>NOTICE.txt</include>
@@ -60,7 +86,7 @@
     </fileSet>
     <fileSet>
       <directory>${robovmdir}/rt</directory>
-      <outputDirectory>license/rt</outputDirectory>
+      <outputDirectory>modules/licenses/rt</outputDirectory>
       <includes>
         <include>LICENSE.txt</include>
         <include>NOTICE.txt</include>
@@ -68,7 +94,7 @@
     </fileSet>
     <fileSet>
       <directory>${robovmdir}/vm</directory>
-      <outputDirectory>license/vm</outputDirectory>
+      <outputDirectory>modules/licenses/vm</outputDirectory>
       <includes>
         <include>LICENSE.txt</include>
         <include>NOTICE.txt</include>
