@@ -12,11 +12,10 @@
   <artifactId>robovm-dist-parent</artifactId>
   <name>RoboVM Distribution</name>
   <packaging>pom</packaging>
-  <version>1.0.0-SNAPSHOT</version>
 
   <properties>
     <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
-    <robovm.version>${project.version}</robovm.version>
+    <robovm.version>${project.parent.version}</robovm.version>
     <release.arguments />
   </properties>
 
