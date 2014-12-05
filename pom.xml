@@ -11,7 +11,7 @@
   <groupId>org.robovm</groupId>
   <artifactId>robovm-dist-parent</artifactId>
   <name>RoboVM Distribution</name>
-  <version>1.0.0-beta-01</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <properties>
