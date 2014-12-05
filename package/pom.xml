@@ -20,45 +20,45 @@
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-dist-compiler</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
       <classifier>sources</classifier>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-objc</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-objc</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
       <classifier>sources</classifier>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-cocoatouch</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-cocoatouch</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
       <classifier>sources</classifier>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-cacerts-full</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
 
