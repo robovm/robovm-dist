@@ -3,18 +3,51 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.robovm</groupId>
-    <artifactId>robovm-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
   </parent>
 
+  <groupId>org.robovm</groupId>
   <artifactId>robovm-dist-parent</artifactId>
   <name>RoboVM Distribution</name>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <properties>
     <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
+    <robovm.version>${project.version}</robovm.version>
   </properties>
+
+  <url>http://www.robovm.com</url>
+  <description>
+    The RoboVM compiler translates Java bytecode into native ARM or x86 code. Apps run directly on the CPU.
+    No interpreter or virtual machine involved.
+  </description>
+  <inceptionYear>2012</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>RoboVM License Agreement</name>
+      <url>http://www.robovm.com/license/</url>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Trillian Mobile AB</name>
+    <url>http://www.robovm.com</url>
+  </organization>
+
+  <scm>
+    <url>https://github.com/robovm/robovm-dist</url>
+    <connection>scm:git:git://github.com/robovm/robovm-dist.git</connection>
+    <developerConnection>scm:git:git@github.com:robovm/robovm-dist.git</developerConnection>
+  </scm>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/robovm/robovm/issues</url>
+  </issueManagement>
 
   <profiles>
     <profile>
