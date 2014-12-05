@@ -14,7 +14,7 @@
 
   <properties>
     <robovmdir>${basedir}/../../robovm</robovmdir>
-    <robovm.version>1.0.0-beta-01</robovm.version>
+    <robovm.version>1.0.0-SNAPSHOT</robovm.version>
   </properties>
 
   <dependencies>
