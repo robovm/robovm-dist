@@ -16,7 +16,7 @@
 
   <properties>
     <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
-    <robovm.version>${project.parent.version}</robovm.version>
+    <robovm.version>1.0.0-alpha-04</robovm.version>
     <release.arguments />
   </properties>
 
