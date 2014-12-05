@@ -16,7 +16,7 @@
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-compiler</artifactId>
-      <version>${robovm.version}</version>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
   
