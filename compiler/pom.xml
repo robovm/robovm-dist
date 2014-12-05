@@ -12,6 +12,11 @@
   <name>RoboVM Distribution (compiler jars)</name>
   <packaging>jar</packaging>
 
+  <properties>
+    <robovmdir>${basedir}/../../robovm</robovmdir>
+    <robovm.version>1.0.0-alpha-04</robovm.version>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.robovm</groupId>
