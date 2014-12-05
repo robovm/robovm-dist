@@ -26,13 +26,6 @@
   </description>
   <inceptionYear>2012</inceptionYear>
 
-  <licenses>
-    <license>
-      <name>RoboVM License Agreement</name>
-      <url>http://www.robovm.com/license/</url>
-    </license>
-  </licenses>
-
   <organization>
     <name>Trillian Mobile AB</name>
     <url>http://www.robovm.com</url>
