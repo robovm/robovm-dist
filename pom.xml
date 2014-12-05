@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.robovm</groupId>
     <artifactId>robovm-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-beta-01</version>
   </parent>
 
   <groupId>org.robovm</groupId>
@@ -35,6 +35,7 @@
     <url>https://github.com/robovm/robovm-dist</url>
     <connection>scm:git:git://github.com/robovm/robovm-dist.git</connection>
     <developerConnection>scm:git:git@github.com:robovm/robovm-dist.git</developerConnection>
+    <tag>robovm-dist-1.0.0-beta-01</tag>
   </scm>
 
   <issueManagement>
