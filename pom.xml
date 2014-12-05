@@ -11,13 +11,13 @@
   <groupId>org.robovm</groupId>
   <artifactId>robovm-dist-parent</artifactId>
   <name>RoboVM Distribution</name>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0-beta-01</version>
   <packaging>pom</packaging>
 
   <properties>
     <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
     <robovm.version>${project.version}</robovm.version>
-    <release.arguments></release.arguments>
+    <release.arguments />
   </properties>
 
   <url>http://www.robovm.com</url>
@@ -83,15 +83,15 @@
                 <target>
                   <fail message="The property licenseTxtURL must be specified">
                     <condition>
-                      <equals arg1="${licenseTxtURL}" arg2="unknown"/>
+                      <equals arg1="${licenseTxtURL}" arg2="unknown" />
                     </condition>
                   </fail>
-                  <property name="licenseFile" value="${basedir}/target/LICENSE.txt"/>
-                  <echo message="Downloading license text from ${licenseTxtURL} to ${licenseFile}"/>
+                  <property name="licenseFile" value="${basedir}/target/LICENSE.txt" />
+                  <echo message="Downloading license text from ${licenseTxtURL} to ${licenseFile}" />
                   <loadresource property="license">
-                    <url url="${licenseTxtURL}"/>
+                    <url url="${licenseTxtURL}" />
                   </loadresource>
-                  <echo message="${license}" file="${licenseFile}"/>
+                  <echo message="${license}" file="${licenseFile}" />
                 </target>
               </configuration>
               <goals>
