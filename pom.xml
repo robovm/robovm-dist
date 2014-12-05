@@ -36,7 +36,6 @@
     <url>https://github.com/robovm/robovm-dist</url>
     <connection>scm:git:git://github.com/robovm/robovm-dist.git</connection>
     <developerConnection>scm:git:git@github.com:robovm/robovm-dist.git</developerConnection>
-    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
