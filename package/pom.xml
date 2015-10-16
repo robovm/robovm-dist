@@ -43,7 +43,7 @@
       <groupId>org.robovm</groupId>
       <artifactId>robovm-objc</artifactId>
       <version>${robovm.version}</version>
-      <classifier>sources</classifier>
+      <classifier>javadoc</classifier>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
@@ -54,7 +54,7 @@
       <groupId>org.robovm</groupId>
       <artifactId>robovm-cocoatouch</artifactId>
       <version>${robovm.version}</version>
-      <classifier>sources</classifier>
+      <classifier>javadoc</classifier>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
