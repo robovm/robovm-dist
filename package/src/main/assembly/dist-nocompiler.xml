@@ -32,7 +32,13 @@
     <dependencySet>
       <includes>
         <include>*:*:*:sources</include>
+        <include>org.robovm:robovm-objc:*:javadoc</include>
+        <include>org.robovm:robovm-cocoatouch:*:javadoc</include>
       </includes>
+      <excludes>
+        <exclude>org.robovm:robovm-objc:*:sources</exclude>
+        <exclude>org.robovm:robovm-cocoatouch:*:sources</exclude>
+      </excludes>
       <outputDirectory>lib</outputDirectory>
       <unpack>false</unpack>
       <outputFileNameMapping>${artifact.artifactId}-${artifact.classifier}.${artifact.extension}</outputFileNameMapping>
