@@ -3,63 +3,62 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.robovm</groupId>
-    <artifactId>robovm-dist-parent</artifactId>
-    <version>1.9.1-SNAPSHOT</version>
+    <groupId>com.bugvm</groupId>
+    <artifactId>bugvm-dist-parent</artifactId>
+    <version>1.8.1</version>
   </parent>
 
-  <artifactId>robovm-dist</artifactId>
-  <name>RoboVM Distribution (tar.gz package)</name>
+  <artifactId>bugvm-dist</artifactId>
+  <name>BugVM Distribution (tar.gz package)</name>
   <packaging>pom</packaging>
 
   <properties>
-    <robovmdir>${basedir}/../../robovm</robovmdir>
-    <robovm.version>${project.version}</robovm.version>
+    <bugvmdir>${basedir}/../../bugvm</bugvmdir>
+    <bugvm.version>${project.version}</bugvm.version>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-dist-compiler</artifactId>
-      <version>${robovm.version}</version>
+      <groupId>com.bugvm</groupId>
+      <artifactId>bugvm-dist-compiler</artifactId>
+      <version>${bugvm.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt</artifactId>
-      <version>${robovm.version}</version>
+      <groupId>com.bugvm</groupId>
+      <artifactId>bugvm-rt</artifactId>
+      <version>${bugvm.version}</version>
+      <scope>system</scope>
+      <systemPath>${bugvmdir}/rt/target/bugvm-rt-${bugvm.version}.jar</systemPath>
     </dependency>
     <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt</artifactId>
-      <version>${robovm.version}</version>
+      <groupId>com.bugvm</groupId>
+      <artifactId>bugvm-rt</artifactId>
+      <version>${bugvm.version}</version>
       <classifier>sources</classifier>
+      <scope>system</scope>
+      <systemPath>${bugvmdir}/rt/target/bugvm-rt-${bugvm.version}-sources.jar</systemPath>
     </dependency>
     <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-objc</artifactId>
-      <version>${robovm.version}</version>
+      <groupId>com.bugvm</groupId>
+      <artifactId>bugvm-objc</artifactId>
+      <version>${bugvm.version}</version>
+      <scope>system</scope>
+      <systemPath>${bugvmdir}/objc/target/bugvm-objc-${bugvm.version}.jar</systemPath>
     </dependency>
     <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-objc</artifactId>
-      <version>${robovm.version}</version>
-      <classifier>javadoc</classifier>
+      <groupId>com.bugvm</groupId>
+      <artifactId>bugvm-cocoatouch</artifactId>
+      <version>${bugvm.version}</version>
+      <scope>system</scope>
+      <systemPath>${bugvmdir}/cocoatouch/target/bugvm-cocoatouch-${bugvm.version}.jar</systemPath>
     </dependency>
+
     <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-cocoatouch</artifactId>
-      <version>${robovm.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-cocoatouch</artifactId>
-      <version>${robovm.version}</version>
-      <classifier>javadoc</classifier>
-    </dependency>
-    <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-cacerts-full</artifactId>
-      <version>${robovm.version}</version>
+      <groupId>com.bugvm</groupId>
+      <artifactId>bugvm-cacerts-full</artifactId>
+      <version>${bugvm.version}</version>
+      <scope>system</scope>
+      <systemPath>${bugvmdir}/cacerts/full/target/bugvm-cacerts-full-${bugvm.version}.jar</systemPath>
     </dependency>
   </dependencies>
 
@@ -87,8 +86,8 @@
               <goal>exec</goal>
             </goals>
             <configuration>
-              <executable>${robovmdir}/vm/fetch-binaries.sh</executable>
-              <skip>${skipFetchBinaries}</skip>
+              <executable>${bugvmdir}/vm/fetch-binaries.sh</executable>
+              <!--<skip>${skipFetchBinaries}</skip>-->
             </configuration>
           </execution>
         </executions>
@@ -107,22 +106,8 @@
               <descriptors>
                 <descriptor>src/main/assembly/dist-full.xml</descriptor>
               </descriptors>
-              <finalName>robovm-${project.version}</finalName>
+              <finalName>bugvm-${project.version}</finalName>
               <appendAssemblyId>false</appendAssemblyId>
-            </configuration>
-          </execution>
-          <execution>
-            <id>distro-nocompiler-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/assembly/dist-nocompiler.xml</descriptor>
-              </descriptors>
-              <finalName>robovm-${project.version}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
         </executions>
