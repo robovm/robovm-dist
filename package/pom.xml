@@ -4,12 +4,12 @@
 
   <parent>
     <groupId>org.robovm</groupId>
-    <artifactId>robovm-dist-parent</artifactId>
-    <version>1.9.1-SNAPSHOT</version>
+    <artifactId>bugvm-dist-parent</artifactId>
+    <version>1.6.0</version>
   </parent>
 
-  <artifactId>robovm-dist</artifactId>
-  <name>RoboVM Distribution (tar.gz package)</name>
+  <artifactId>bugvm-dist</artifactId>
+  <name>BugVM Distribution (tar.gz package)</name>
   <packaging>pom</packaging>
 
   <properties>
@@ -20,45 +20,45 @@
   <dependencies>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-dist-compiler</artifactId>
+      <artifactId>bugvm-dist-compiler</artifactId>
       <version>${robovm.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt</artifactId>
+      <artifactId>bugvm-rt</artifactId>
       <version>${robovm.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt</artifactId>
+      <artifactId>bugvm-rt</artifactId>
       <version>${robovm.version}</version>
       <classifier>sources</classifier>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-objc</artifactId>
+      <artifactId>bugvm-objc</artifactId>
       <version>${robovm.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-objc</artifactId>
-      <version>${robovm.version}</version>
-      <classifier>javadoc</classifier>
-    </dependency>
-    <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-cocoatouch</artifactId>
-      <version>${robovm.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-cocoatouch</artifactId>
+      <artifactId>bugvm-objc</artifactId>
       <version>${robovm.version}</version>
       <classifier>javadoc</classifier>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-cacerts-full</artifactId>
+      <artifactId>bugvm-cocoatouch</artifactId>
+      <version>${robovm.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.robovm</groupId>
+      <artifactId>bugvm-cocoatouch</artifactId>
+      <version>${robovm.version}</version>
+      <classifier>javadoc</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.robovm</groupId>
+      <artifactId>bugvm-cacerts-full</artifactId>
       <version>${robovm.version}</version>
     </dependency>
   </dependencies>
@@ -107,22 +107,8 @@
               <descriptors>
                 <descriptor>src/main/assembly/dist-full.xml</descriptor>
               </descriptors>
-              <finalName>robovm-${project.version}</finalName>
+              <finalName>bugvm-${project.version}</finalName>
               <appendAssemblyId>false</appendAssemblyId>
-            </configuration>
-          </execution>
-          <execution>
-            <id>distro-nocompiler-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/assembly/dist-nocompiler.xml</descriptor>
-              </descriptors>
-              <finalName>robovm-${project.version}</finalName>
-              <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
         </executions>
