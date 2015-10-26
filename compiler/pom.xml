@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.robovm</groupId>
+    <groupId>com.bugvm</groupId>
     <artifactId>bugvm-dist-parent</artifactId>
-    <version>1.6.0</version>
+    <version>1.8.1</version>
   </parent>
 
   <artifactId>bugvm-dist-compiler</artifactId>
@@ -13,30 +13,19 @@
   <packaging>jar</packaging>
 
   <properties>
-    <robovmdir>${basedir}/../../robovm</robovmdir>
-    <robovm.version>${project.version}</robovm.version>
+    <bugvmdir>${basedir}/../../bugvm</bugvmdir>
+    <bugvm.version>${project.version}</bugvm.version>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>org.robovm</groupId>
+      <groupId>com.bugvm</groupId>
       <artifactId>bugvm-compiler</artifactId>
-      <version>${robovm.version}</version>
+      <version>${bugvm.version}</version>
+      <scope>system</scope>
+      <systemPath>${bugvmdir}/compiler/target/bugvm-compiler-${bugvm.version}.jar</systemPath>
     </dependency>
   </dependencies>
-  
-  <profiles>
-    <profile>
-      <id>commercial</id>
-      <dependencies>
-        <dependency>
-          <groupId>com.robovm</groupId>
-          <artifactId>bugvm-proprietary</artifactId>
-          <version>${robovm.version}</version>
-        </dependency>
-      </dependencies>
-  	</profile>
-  </profiles>
 
   <build>
     <plugins>
@@ -81,7 +70,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>1.5</version>
+        <version>2.4.1</version>
         <executions>
           <execution>
             <phase>package</phase>

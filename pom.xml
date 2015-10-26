@@ -3,24 +3,25 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.robovm</groupId>
+    <groupId>com.bugvm</groupId>
     <artifactId>bugvm-parent</artifactId>
-    <version>1.6.0</version>
+    <version>1.8.1</version>
   </parent>
 
-  <groupId>org.robovm</groupId>
+
+  <groupId>com.bugvm</groupId>
   <artifactId>bugvm-dist-parent</artifactId>
   <name>BugVM Distribution</name>
   <packaging>pom</packaging>
-  <version>1.6.0</version>
+  <version>1.8.1</version>
 
   <properties>
     <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
-    <robovm.version>${project.version}</robovm.version>
+    <bugvm.version>${project.version}</bugvm.version>
     <release.arguments />
   </properties>
 
-  <url>http://www.ibinti.com</url>
+  <url>http://www.bugvm.com</url>
   <description>
     The BugVM compiler translates Java bytecode into native ARM or x86 code. Apps run directly on the CPU.
     No interpreter or virtual machine involved.
@@ -29,7 +30,7 @@
 
   <organization>
     <name>BugVM CD</name>
-    <url>http://www.ibinti.com</url>
+    <url>http://www.bugvm.com</url>
   </organization>
 
   <scm>
@@ -70,50 +71,6 @@
               </manifest>
             </archive>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.1</version>
-          <configuration>
-            <!-- Workaround for an issue in Maven's release plugin. It doesn't 
-                 pass -Darguments here if a profile (like sonatype's) sets 
-                 <arguments> in the release plugin config. We also set the same
-                  config properties as sonatype's pom does since our configuration 
-                  overwrites theirs. -->
-            <mavenExecutorId>forked-path</mavenExecutorId>
-            <useReleaseProfile>false</useReleaseProfile>
-            <arguments>-Psonatype-oss-release ${release.arguments}</arguments>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.7</version>
-          <executions>
-            <execution>
-              <id>create-license-txt</id>
-              <phase>none</phase>
-              <configuration>
-                <target>
-                  <fail message="The property licenseTxtURL must be specified">
-                    <condition>
-                      <equals arg1="${licenseTxtURL}" arg2="unknown" />
-                    </condition>
-                  </fail>
-                  <property name="licenseFile" value="${basedir}/target/LICENSE.txt" />
-                  <echo message="Downloading license text from ${licenseTxtURL} to ${licenseFile}" />
-                  <loadresource property="license">
-                    <url url="${licenseTxtURL}" />
-                  </loadresource>
-                  <echo message="${license}" file="${licenseFile}" />
-                </target>
-              </configuration>
-              <goals>
-                <goal>run</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
       </plugins>
     </pluginManagement>

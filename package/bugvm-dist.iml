@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="bugvm-dist-compiler" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.bugvm:bugvm-compiler:1.8.1">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../bugvm/compiler/target/bugvm-compiler-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.bugvm:bugvm-rt:1.8.1">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../bugvm/rt/target/bugvm-rt-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.bugvm:bugvm-rt:sources:1.8.1">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../bugvm/rt/target/bugvm-rt-1.8.1-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.bugvm:bugvm-objc:1.8.1">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../bugvm/objc/target/bugvm-objc-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.bugvm:bugvm-cocoatouch:1.8.1">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../bugvm/cocoatouch/target/bugvm-cocoatouch-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.bugvm:bugvm-cacerts-full:1.8.1">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../bugvm/cacerts/full/target/bugvm-cacerts-full-1.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
