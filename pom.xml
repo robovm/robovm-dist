@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.robovm</groupId>
     <artifactId>robovm-parent</artifactId>
-    <version>1.12.0</version>
+    <version>1.11.1-SNAPSHOT</version>
   </parent>
 
   <groupId>org.robovm</groupId>
@@ -16,7 +16,7 @@
 
   <properties>
     <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
-    <robovm.version>1.12.0</robovm.version>
+    <robovm.version>${project.version}</robovm.version>
     <release.arguments />
   </properties>
 
