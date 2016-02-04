@@ -25,12 +25,23 @@
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt</artifactId>
+      <artifactId>robovm-rt-android</artifactId>
       <version>${robovm.version}</version>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt</artifactId>
+      <artifactId>robovm-rt-android</artifactId>
+      <version>${robovm.version}</version>
+      <classifier>sources</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.robovm</groupId>
+      <artifactId>robovm-rt-ojdk8</artifactId>
+      <version>${robovm.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.robovm</groupId>
+      <artifactId>robovm-rt-ojdk8</artifactId>
       <version>${robovm.version}</version>
       <classifier>sources</classifier>
     </dependency>
