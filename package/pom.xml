@@ -27,24 +27,48 @@
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt-android</artifactId>
       <version>${robovm.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.robovm</groupId>
+          <artifactId>robovm-rt-common</artifactId>
+        </exclusion>
+      </exclusions> 
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt-android</artifactId>
       <version>${robovm.version}</version>
       <classifier>sources</classifier>
+      <exclusions>
+        <exclusion>
+          <groupId>org.robovm</groupId>
+          <artifactId>robovm-rt-common</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt-ojdk8</artifactId>
       <version>${robovm.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.robovm</groupId>
+          <artifactId>robovm-rt-common</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt-ojdk8</artifactId>
       <version>${robovm.version}</version>
       <classifier>sources</classifier>
-    </dependency>
+      <exclusions>
+        <exclusion>
+          <groupId>org.robovm</groupId>
+          <artifactId>robovm-rt-common</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>-->
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-objc</artifactId>
