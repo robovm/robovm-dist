@@ -46,7 +46,7 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <!--<dependency>
+    <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt-ojdk8</artifactId>
       <version>${robovm.version}</version>
@@ -68,7 +68,7 @@
           <artifactId>robovm-rt-common</artifactId>
         </exclusion>
       </exclusions>
-    </dependency>-->
+    </dependency>    
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-objc</artifactId>
