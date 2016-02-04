@@ -9,7 +9,7 @@
       </includes>
     </fileSet>
     <fileSet>
-      <directory>${robovmdir}/vm/binaries</directory>
+      <directory>${robovmdir}/vm/target.natives/binaries</directory>
       <includes>
         <include>**/*</include>
       </includes>
@@ -85,8 +85,16 @@
       </includes>
     </fileSet>
     <fileSet>
-      <directory>${robovmdir}/rt</directory>
-      <outputDirectory>modules/licenses/rt</outputDirectory>
+      <directory>${robovmrtdir}/common</directory>
+      <outputDirectory>modules/licenses/robovm-rt</outputDirectory>
+      <includes>
+        <include>LICENSE.txt</include>
+        <include>NOTICE.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>${robovmrtdir}/android</directory>
+      <outputDirectory>modules/licenses/robovm-rt-android</outputDirectory>
       <includes>
         <include>LICENSE.txt</include>
         <include>NOTICE.txt</include>
