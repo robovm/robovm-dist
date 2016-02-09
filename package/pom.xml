@@ -17,6 +17,37 @@
     <robovm.version>${project.version}</robovm.version>
   </properties>
 
+  <profiles>
+    <profile>
+      <id>ojdk8</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.robovm</groupId>
+          <artifactId>robovm-rt-ojdk8</artifactId>
+          <version>${robovm.version}</version>
+          <exclusions>
+            <exclusion>
+              <groupId>org.robovm</groupId>
+              <artifactId>robovm-rt-common</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
+        <dependency>
+          <groupId>org.robovm</groupId>
+          <artifactId>robovm-rt-ojdk8</artifactId>
+          <version>${robovm.version}</version>
+          <classifier>sources</classifier>
+          <exclusions>
+            <exclusion>
+              <groupId>org.robovm</groupId>
+              <artifactId>robovm-rt-common</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+
   <dependencies>
     <dependency>
       <groupId>org.robovm</groupId>
@@ -37,29 +68,6 @@
     <dependency>
       <groupId>org.robovm</groupId>
       <artifactId>robovm-rt-android</artifactId>
-      <version>${robovm.version}</version>
-      <classifier>sources</classifier>
-      <exclusions>
-        <exclusion>
-          <groupId>org.robovm</groupId>
-          <artifactId>robovm-rt-common</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt-ojdk8</artifactId>
-      <version>${robovm.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.robovm</groupId>
-          <artifactId>robovm-rt-common</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.robovm</groupId>
-      <artifactId>robovm-rt-ojdk8</artifactId>
       <version>${robovm.version}</version>
       <classifier>sources</classifier>
       <exclusions>
