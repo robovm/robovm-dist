@@ -5,14 +5,14 @@
   <parent>
     <groupId>org.robovm</groupId>
     <artifactId>robovm-parent</artifactId>
-    <version>1.13.1-SNAPSHOT</version>
+    <version>1.14.1-SNAPSHOT</version>
   </parent>
 
   <groupId>org.robovm</groupId>
   <artifactId>robovm-dist-parent</artifactId>
   <name>RoboVM Distribution</name>
   <packaging>pom</packaging>
-  <version>1.13.1-SNAPSHOT</version>
+  <version>1.14.1-SNAPSHOT</version>
 
   <properties>
     <licenseTxtURL>file://${basedir}/../LICENSE.txt</licenseTxtURL>
